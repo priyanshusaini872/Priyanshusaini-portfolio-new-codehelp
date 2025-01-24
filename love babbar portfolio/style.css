@@ -1,0 +1,1162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", serif;
+    /* font-family: "Poppins", serif; */
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bgOrange: #e84949;
+}
+
+
+/* hamne apna pura code wrapper div me likha hai to pure wrapper ki hieght 1000vh mtlb pure viewport k barabar  me scroll karna hai to overflow auto and x me nhi krn to hidden  */
+
+#wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x:hidden ;
+}
+
+/* container bnaa but usme hmri website k content onlyy 1200 px k hai to container me width hmne 1200 px hardcode krdi */
+
+.container{
+    width: 1200px;   
+    margin: 0 auto;   /* ye container same margin le lega left or right se as ham container centre me chahte the  */
+}
+
+.navbar{
+    display: flex; /* isse logo or nav items ek line me  age logo or nav item nav bar div me the or logo box or nav item vala box muje extreme me chahie page k to justif content or agar extreme me to ho sath me verticall centre me ho to align items centre   */
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 1rem;
+}
+
+/* ab dekho jo hamaar logo container me do cheej hai image or text vo vertical line me h ek dusre k neeche muje vo horizontal line me cahhie to me logo contanier div me bhi flex lga dunga or logo ko thoda chota krne k lie logo class pe width vgyara lagaenge  */
+
+.logo-container{
+    display: flex;
+    justify-content: baseline;
+    align-items: center; /*isse hmara logo img or text same line me a jaenge */
+}
+
+.logo{
+    width: 80px;
+}
+
+
+.nav-items{
+    display: flex;
+    gap: 2rem;
+    padding: 0 4rem;  /*isse ye hua ki nav items ki linka verticall thi to flex se horizontal kar dia and padding vgara de di  */
+}
+
+.logo-text{
+   margin-left:-1.3rem ;  /* ye ham logo text ko logo imge k pas le gye */
+    font-size: 28px;
+}
+
+.nav-items div{    /*   nav items k andar html me 3 div hai 3 nav items ki unke lie properties di  */
+ font-size:20px;
+ font-weight: 500;
+ cursor: pointer;    
+
+}
+
+.nav-items div a {
+    color:black ;
+}
+
+/* nav items me jo div hai usme jo anchor hai uska color blue tha to hmne black kr dia 
+or niche links me ek line ati hai vo niche hat di hamne text decoration none krke  */
+
+a{
+    text-decoration: none;
+
+}
+
+.nav-items div:hover{
+    transition:1s eas;
+    font-weight: bold;
+}
+
+/* ab hero section style krenge isme position rel rkhi as hame iske contents vgyara overlap krne honge display flex kri contents center me laye and margin vgyara dia  */
+
+.hero-section{
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+
+}
+
+/* faded text k lie prop dekhe to text select na kr pae koi to user select none kia font size bada rakha color change kt dia kuch positioning vgara k lie prop dali  */
+
+.faded-text{
+    position: absolute;
+    user-select: none;
+    font-size: 7rem;
+    color: rgb(231,231,231);
+
+    bottom: -16px;
+    left: -5%;
+    font-weight:bold ;
+    transition: all 3s;
+}
+
+/* hero section left me jo 4 cheej thi 3 text or ek button to unhe flex direction colum di as ek k upar ek hi chahie vo hame  */
+.hero-section-left
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* hero sec heading style krte hai  */
+
+.hero-section-heading{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+/* ab hamara jo rolling text hai uska change krte hai color change  */
+
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+}
+
+.hero-section-sub-heading{
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.hero-section-description{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+.btn-pink{
+    background-color: var(--bgOrange);
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-pink::before{
+    content:"";
+    position:absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+
+.btn-pink:hover::before{
+    transform: scaleX(1);
+}
+
+.btn-pink:hover{
+    border:solid 3px var(--bgOrange);
+    color: black;
+}
+
+#btn-bottom{
+    display: none;
+}
+
+/* hero section right ki position relative krdi or hamne hero sec right me absolute class de rkhi thi usko class ko hamne bnaya tha ki dots vgyara ki position absolute krne k lie
+hero sec right me sare element h right k thats is image and dots vgayara mtlb uski position me change ane se dusro pe fark padega but jo right me individual elements hai vo absolute honge kisi ko agar absolute krna hai to uska nearest possible ancestor relative hona chahie    */
+
+.hero-section-right{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+
+/* user image me padding hai jo image k charo trf thoda space hai and  thoda sa grey effect dera image me  by filter greyscale  
+transition me ham ye krenge ki image choti badi hogi and badi hone pe grey hori choti me normal  */
+.user-image{
+    padding: 2.5rem;
+    filter: grayscale(1);
+    transition: all 1s;
+    animation: scaleImage 5s linear infinite; /*scaleImage is identifier for our keyframes jisme ham set krenge hamari image choti badi hona */
+}
+
+
+/* user image me jo hamari image hai vo peeche bg me honi chahie or uske upar baki choti images overlap hongi to main image ko hamne neg z index de dia  */
+.user-image img{
+    z-index: -9;
+}
+
+/* 
+animation me keyframes me hamne 3 keyframe lagaye hai 0% jab jab image start me normal choti thi to grayscale 0 and scale that is size 1 50% pe badi hui and grey hui 100% vapas choto and not grey  */
+
+@keyframes scaleImage  {
+    0%{
+        filter:grayscale(0);
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(1);
+        box-shadow: 3px 3px 10px black ;
+    }
+
+    100%{
+        transform: scale(1);
+        filter: grayscale(0);
+    }
+    
+}
+
+/* ab similarly icon dots ko animate krenge */ 
+
+
+/* dots hamari image k upar hai to z index change kr lenge positive and bottom and right ki poition set or animation ka name rkhenge dotsAnimation animation duration and iteration set kia baki keyframes lagae 
+keyframes me 0 50 100 percent pe kra jab 0 hogi us time no movement 50 pe thoda niche kr dia 100 pe vapas vahi  */
+
+.icon-dots{
+    z-index: 9;
+    bottom: -1rem;  /* this is bottom wrt to the parent that is hero section right div  */
+    right: 0;
+    animation-name: dotsAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dotsAnimation {
+    0%{
+        transform: translatey(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* similarly for cube  */
+
+.icon-cube{
+    z-index: 9;
+    top: -0.8em;
+    right: 1em;
+    animation-name: cubeRotate;
+    animation-duration: 3s;
+    animation-iteration-count:infinite ;
+
+}
+
+@keyframes cubeRotate {
+    0%{
+        transform:rotateY(0deg) translateY(0px) ;
+    }
+    50%{
+        transform: rotateY(180deg) translateY(-12px);
+    }
+    100%{
+        transform: rotateY(0deg) translateY(0px) ;
+    }
+}
+
+/* 
+similarly for circle  */
+.icon-circle{
+    z-index: 9;
+    left: 0;
+    bottom: 0;
+    animation-name: shakeEffect;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shakeEffect {
+    50%{
+        left: 5%;
+        bottom: 6%;
+        
+    }
+
+    }
+      
+/* now for zigzak */
+
+.icon-zigzag{
+z-index: 9;
+top: 1.5rem;
+left: -0.3em;
+animation:zigzagAnimation 5s ease-in infinite ;
+}
+
+@keyframes zigzagAnimation {
+    50%{
+        left: 5%;
+        top: 2%;
+    }
+    
+}
+
+.icon-plus{
+    z-index: 9;
+    top: -0.8rem;
+    left: 50%;
+    animation: shakeEffectPlus 5s ease-in infinite;
+}
+    
+@keyframes shakeEffectPlus {
+    50%{
+       top: 0.3%;
+       left: 48;
+    }
+    
+}
+
+/* lets set the media query of this section  */
+
+@media (max-width: 1300px) {
+    .hero-section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: -1rem;
+      padding-bottom: 3rem;
+    }
+    .hero-section-description {
+      text-align: center;
+      margin: auto;
+    }
+    .fadedtext {
+      display: none;
+    }
+    #btn-top {
+      display: none;
+    }
+    #btn-bottom {
+      margin-top: -7rem;
+      display: block;
+    }
+    .hero-section-right {
+      margin-top: -6em;
+      scale: 0.7;
+    }
+  }
+
+  
+
+
+    
+/* ab priyanshu saini text shi jgh late hai agar ham priyanshu faded text me absolute property add kr de to ho jaega as hamne faded text ki css me bottom -16 de rkhi left -5 to uski vjh se hua  */
+
+
+/* ab peoject sec dekhte hai to isme ek heading hai or 4 isme sec hai to ham ek bada sec bnaenge jisme sare proj honge to isme hogi ek heading then ek card or uske sath ek number us no. k bad icons hai bhut sare heading hai button jab ham is image pe hover ni krte to ispe ek black tint ati hai or piche ek bg image hai jo hamara actual past project hai uspe hamne button dala to read more uspe hamne icon dale for its github code and all or jo hamaari phli image hai vo left side ki trf h or usme ekshadow si hai phli image 01 rihjt me h 2nd me left side hai to kafi cheeje hai  */
+
+/* project section ko hMNE CONTiner me ni rkha kyuki project k lie width 1200 px nhi full 100%chahie thi */
+
+
+
+.project{
+    background-color: rgb(231,231,231);
+    margin-top: 4rem;
+}
+/* 
+project ka jo main div h uska bg grey kia or charo side se 4 rem ka margin page heading bhi set ki  */
+
+.page-header{
+    color: var(--bgOrange);
+    font-size: 90px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+/* dekho project ki jo main div thi vo to puri div leri thi but project cards hamare chahe lef align ho ya right align ek fix dayre me h vertically or us dayre ki width 1200px h to project container ki max width ho gyi 1200 sath hi me margin kr dia 0  */
+.project-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+}
+
+/* ek card ne hamara filhal pura width le rkha of container ie 1200px to usko ham uski width set krenge hieght set krenge hiegt set krke overflow hoga card me ham ek bg image lagaenge of actual project ham chahte hai bg image pura card cover kre to bg size cover kr lenge bg image no repeat is car image k upar conent dena hai to is card ko muje relative krna h or iska content jo overlap hoga vo absolute hoga ham isme ek box shadow pe denge   */
+
+.project-card{
+    width: 90%;
+    height: 550px;
+    background-image: url(/Screenshot\ \(1302\).png);
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f;
+
+}
+
+/* ab ham project card hover krne pe dekhte hai ham content khenge no change then position kyuki overlap hoga ek filter sa to absolute margin denge charo trf se bg color denge jo hover ope ayega and original scale set kia 1  */
+
+.project-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1f1f1f9a;
+    z-index: 0;
+    transform: scaleX(1);
+}
+
+/* before use kia blue filter k lie vo filter overlap krega to position ki absolute me chahta hu vo pura card cover kre to margin 0  */
+
+.project-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,#545d68,#343d68be,#343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 1;
+    transition: all 0.4s;
+}
+
+/* jab me hover nhi karta to before me scale 0 hai transform ka mtlb change ni hora but when i hover to scale becomes 1 means transform prop applies  */
+
+.project-card:hover::before{
+    transform: scale(1);
+}
+
+/* ab agar ham project number dekhe to ko positioning ki value 01 and 03 ki ek hogi and 02 04 ki ek to 01 and 03 k lie class hai proj number right  */
+/* ab ham chahte hai initially hame proj no. display na ho hover krne pe ho to uske lie hamne proj no. me display none kia hai jab hover ho tab dikhe number display none ki jgh opacity 0 bhi kr skte hai or hover pe 100 ham 
+*/
+ .project-number{
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: white;
+    z-index: 10;
+    display: none;
+}
+
+/* jab hover ho tab dikhe number  */
+.project-card:hover .project-number{
+    display:block ;
+}
+
+
+.project-number-right{
+    right: -40px;
+    top: -45px;
+}
+
+.project-number-left{
+    left: -40px;
+    top: -45px;
+    
+}
+
+
+/* jo bhi content hai vo page k upar overlap to absolute and 4 cheeje hai content ki to flex colum kr dia jo text h isme vo white hai  */
+
+ .project-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    z-index: 5;
+    gap: 1em;
+    transition: all 0.4s;
+} 
+
+.project-content-left{
+    left: 10%;
+}
+.project-content-right{
+    right: 10%;
+}
+
+
+/* ab icons pe kam krte hai skill container pe kam krne k lie width set ki display row krdi gap rkhdi icons k beech me flex wrap mtlb icons ek line me na a paye to next me a jaenge */
+
+.project-skills-container{
+    width: 60%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ye skills vali choti images ka size set kia  */
+.project-skill{
+    width: 40px;
+}
+
+.project-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+
+}
+
+.project-subHeading{
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.btn-grp{
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+}
+
+.btn-project:hover{
+    cursor: pointer;
+
+}
+
+/* icon pe hover kare to pointer hath vala aye icon white ho github or link vala font size thoda badha dia  */
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    transition: all 0.4s;
+}
+
+.icon:hover{
+    color: var(--bgOrange);
+
+}
+
+
+/* ab ham chahte hai initially hame proj no. display na ho hover krne pe ho to uske lie hamne proj no. me display none kia hai 
+
+
+or chahte hai jese hi card pe hover ho sara content scale ho jaye to sara contenet proj card me hai
+project card k andar hover krne se proj content scale hona chahie 
+
+agar ham likhte proj content : hover {} and usme transform lagate to content pe hover sescale hota but ab card me kahi bho hovet kto content scale hoga */
+
+/* .project-card:hover .project-content{
+    transform: scale(1.1);
+}
+
+#project2{
+    background-image: url(/Screenshot\ \(1303\).png);
+}
+
+#project3{
+    background-image: url(/Screenshot\ \(1301\).png);
+}
+#project4{
+    background-image: url(/Screenshot\ \(1308\).png);
+} */
+
+/* abhi ese sare card ek k niche ek are hame ek thoda right to dursa thoda left ese  chahie to ham margin denge sb me 120 px ie 10 percemt of 1200 2nd and 4th vala hamara thoda left ho jaenge  */
+
+.project-card:hover .project-content{
+    transform: scale(1.1);
+}
+
+#project2{
+    margin-left: 120px;
+    background-image: url(/Screenshot\ \(1303\).png);
+}
+
+#project3{
+    background-image: url(/Screenshot\ \(1301\).png);
+}
+#project4{
+    margin-left: 120px;
+    background-image: url(/Screenshot\ \(1308\).png);
+}
+
+/* ab agar ham page chota kre to card sare beech me ane chahie to ham media query laagenge  */
+
+@media (max-width: 1300px) {
+    .page-header {
+      padding-top: 30px;
+      color: var(--bgOrange);
+      text-align: center;
+      font-size: 40px;
+    }
+    .project-container {
+      padding: 5px;
+      margin: 10px;
+      gap: 60px;
+    }
+    .project-card {
+      width: 100%;
+      height: 300px;
+    }
+    .project-card {
+      background-size: cover;
+      background-position: center;
+    }
+    .project-content {
+      scale: 0.5;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+    .project-content-left {
+      left: 0;
+    }
+    .project-heading {
+      font-size: 40px;
+      width: 100%;
+    }
+    .project-sub-heading {
+      width: 100%;
+    }
+    #project2 {
+      margin-left: 0;
+    }
+    #project4 {
+      margin-left: 0;
+    }
+    .project-skill-container {
+      width: 100%;
+    }
+    .project-skill {
+      width: 35px;
+    }
+    .project-card:hover .project-number {
+      display: none;
+    }
+    .project-card:hover .project-content {
+      scale: 0.55;
+    }
+  }
+
+  /* skill section ye section bhi upar vali 1200 px width pe hi kam krra to yaha bhi container class hogi isme pura ek div hai usme ek div icons ka ek text heading ka or paratext ka heading and para ek div me flex kr denge or unhe  me alag span me dalenge or use bada style krenge ek faded text hai skills ka niche right me icons ka dibba h usme flex hai or flex wrap hai or icons k piche ek animation hai  */
+
+
+  /* sbse phle faded text dekhe to vo hamne set kia bootom right of the container to container jo hamar parent div h usko ham relative kr denge display flex kr denge kyuki do block one by one lagane hai  */
+
+  .skills-container{
+    position: relative;
+    display: flex;
+    padding: 5em;
+    margin: 10rem auto;
+    gap: 30px;
+  }
+
+  .skill-container-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .skill-container-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position: relative;
+    gap: 2rem;
+  }
+
+  .skill-fade-text{
+    position: absolute;
+    font-size: 15rem;
+    font-style: bold;
+    color: rgb(231,231,231);
+    bottom: -28.5% ;
+    right: -25%;
+    user-select: none;
+    overflow-y: hidden;
+   
+  }
+
+/* ab animatiob krenge style blob ki position absolute kro positioning kro */
+
+.blob-style{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index:-5;  /*taki blob piche dikhe */
+    transform: translate(-50%,-50%);
+    animation: blobAnimate 3s linear infinite;
+    
+}
+
+
+@keyframes blobAnimate {
+    50%{
+        top: 54%;
+        left: 46%;
+
+    }
+    
+}
+
+.skills-logo{
+    width: 90px;
+    transition: 0.5s;
+}
+
+/* hover ho icon pe to scale ho */
+
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+
+.skill-heading{
+    font-size: 50px ;
+    font-style: bold;
+    color: var(--bgOrange);
+    line-height: 50px;
+}
+
+.caps{
+    font-size: 90px;
+}
+
+.skill-subHeading{
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+
+}
+
+.skill-subHeading p{
+    margin: 15px 0;
+}
+
+
+/* ab ham contact me and footer section bnanege to contact ne bg color grey h or full width lera ek heading hai ek subheading hai sara form lekin jo hai 1200px me hai ie container class me ayega  */
+
+.contactus-form-container{
+    width:100%;
+    background-color:rgb(231,231,231);
+}
+
+
+.contactus-heading {
+    font-size: 5rem;
+    color: var(--bgOrange);
+    padding-top: 2rem;
+  }
+  
+  .contactus-subheading {
+    font-size: 3rem;
+    color: #343d68aa;
+    text-transform: capitalize;
+  }
+  
+  .contactus-form-container {
+    display: flex;  
+    margin-top: 25px;
+  
+    align-items: center;
+  
+    justify-content: center;
+  }
+
+  /* form k nadr hame pta sari cheeje ek ke neech ek ane vli to form ko flex colum kr dia  */
+  .form{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    width: 70%;
+    margin: 2rem 5rem ;
+  }
+
+
+  .formfield-container {
+    width: 100%;
+  }
+  
+  .formfield {
+    
+    width: 100%;
+  
+    height: 42px;
+  
+    padding: 0 2rem;
+  
+    font-size: 18px;
+  
+  border-radius: 5px;   /*  round corner  */
+  
+    box-shadow: 2px 2px 10px #1f1f1f;
+  
+    font-weight: 500;
+  
+    border: none;
+  
+    margin-top: 27px;
+  }
+  
+  .formfield-textarea {
+    height: auto;
+    padding-top: 1rem;
+  }
+  
+  #submit-btn {
+    border: none;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  
+  #submit-btn:hover {
+    scale:0.9;
+  }
+  
+  .submit-icon {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+  }
+
+
+
+
+
+  @media (max-width: 1300px) {
+    .contactus-heading {
+      font-size: 40px;
+      text-align: center;
+      padding: 15px 10px;
+    }
+  
+    #submit-btn {
+      border: none;
+      font-size: 1rem;
+  
+      margin: 1rem 0;
+    }
+  
+    .contact-us-subheading {
+      font-size: 20px;
+      padding: 0 10px;
+      text-align: center;
+    }
+    .form {
+      max-width: 100%;
+      margin: 0;
+      align-items: center;
+    }
+    .formfield-container {
+      display: flex;
+      align-items: center;
+      width: 90%;
+    }
+    .formfield {
+      max-width: 90%;
+
+    }
+
+}
+
+
+
+/* 
+  ab bnaenge footer blue bg color ek faded text hai ek hyper links wrapper hai or ek text wrapper hai  */
+
+
+  footer {
+    position: relative;
+    margin-top: -1px;
+    background-color: #343d68;
+    padding: 5rem;
+  }
+  
+/* hame icons or links extreme right and left me chshie thi to disp;ay flex kia pure footer wrapper ko or justify content space between kr dia  */
+  .footer-wrapper {
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+  
+    justify-content: space-between;
+  
+    align-items: center;
+  }
+  
+
+  /* faded text ko absolute position kr dia left se 0 margin dia mtlb left me rkhe or bootom se bhi 0  */
+
+
+  .footer-faded-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #535c87;
+    user-select: none;
+    font-size: 5em;
+  }
+  
+
+  /* links me gap dia teeno me  */
+
+  .link-wrapper {
+    display: flex;
+    gap: 1.2rem;
+  }
+  
+
+  /* link wrapper me jo divs hai unme jo link h unka color whote kia underline hatai hover pe color bhi change hoga  */
+
+
+  .link-wrapper div a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.6s;
+  }
+  
+
+  /* link wrapper me jo div h usme jo a h uspe hover  */
+  .link-wrapper div a:hover {
+    color: #e84949;
+    text-decoration: none;
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  @media (max-width: 1300px) {
+    footer {
+      padding: 0.5rem;
+    }
+    .footer-wrapper {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .footer-faded-text {
+      display: none;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* media query codes */
+
+
+
+  /* Hero Section */
+/* @media (max-width: 1300px) {
+  .hero-container {
+    padding: 2em 1em;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+  }
+
+  .hero-btn {
+    padding: 1em 2em;
+    font-size: 1rem;
+  }
+}
+
+/* Navbar */
+/* @media (max-width: 1300px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    text-align: center;
+  }
+
+  .navbar-logo {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .navbar-item {
+    font-size: 1.1rem;
+    padding: 0.5em 0;
+  }
+
+  .navbar-toggle {
+    display: block;
+    padding: 0.8em;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+/* For smaller screens like mobile */
+/* @media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    font-size: 0.9rem;
+    padding: 0.8em 1.5em;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    padding-top: 1.5em;
+  }
+
+  .navbar-item {
+    font-size: 1rem;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+} */
+
+
+
+/* Media Queries for Responsive Design */
+
+/* Project Section */
+/* @media (max-width: 1300px) {
+  .project-container {
+    padding: 5px;
+    margin: 10px;
+    gap: 60px;
+  }
+
+  .project-card {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .project-content {
+    scale: 0.5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  #project2,
+  #project4 {
+    margin-left: 0;
+  }
+} */
+
+/* Skills Section */
+/* @media (max-width: 1300px) {
+  .skills-container {
+    display: flex;
+    padding: 2em;
+    margin: 5rem auto;
+    gap: 30px;
+  }
+
+  .skill-container-left,
+  .skill-container-right {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .skill-fade-text {
+    font-size: 8rem;
+    bottom: -30%;
+    right: -15%;
+  }
+
+  .blob-style {
+    animation: blobAnimate 3s linear infinite;
+    top: 50%;
+    left: 50%;
+    z-index: -5;
+    transform: translate(-50%, -50%);
+  }
+} */
+
+/* Footer Section */
+/* @media (max-width: 1300px) {
+  .footer-container {
+    padding: 2em;
+    gap: 30px;
+    display: block;
+  }
+
+  .footer-logo {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    text-align: center;
+  }
+} */
+

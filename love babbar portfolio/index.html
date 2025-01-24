@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> portfolio website </title>
+    <link rel="stylesheet" href="style.css">
+    <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>
+    
+  
+
+     
+</head>
+<body>
+     <div id="wrapper"> <!--creating a div id wrapper is a good practice  -->
+     <div class="container">
+        <div class="navbar">
+           <div class="logo-container">  <!-- logo continer me do cheeje h ek image ek text imge is first letter  -->
+                <img src="/download (5).jpg" class="logo">
+                <div class="logo-text">riyanshu saini</div>
+        </div>
+<!-- logo container me do cheeje hai ek p ki image nd riyaanshu saini hamne simple text me likh dia  -->
+
+
+ <div class="nav-items">  <!--div class navbar me bhi do cheeje thi ek to logo image nd text fir nav k baki items jo hmnne dale nav items class me ab html ki css krte hai   -->
+    <div> <a href="#projects"> Projects </a></div>
+    <div> <a href="#skills"> Skills </a></div>
+    <div> <a href="#contact me"> Contact me  </a></div>
+ </div>
+
+<!-- dekho nav bar me ye teen option die hai agar ham chahte hai project click krne pe schme ham projects pe jaye to jaha bhi project ki class ham denge bnaenge vaha id projects de denge  -->
+
+
+
+
+        </div>  
+        <!-- ye logo continer logo text nd nav items to div me ai and to div me thi apni apni and collectively ye ayi nav bar vali div me ab agla bnega hero section within the div container and wrapper  -->
+
+
+        <!-- hero section
+         
+        2 part hi left part and right part ek text and ek image vaala left vale me total mere pas 4 cheeje hai 3 text and ek button vo bhi vertically flex use krke and direction colum kr denge hero sec ka right part me total 6 images hai unme animation lagai hai and image overlap krri hai and image scale up and scale down hoga  -->
+
+
+        <div class="hero-section">
+            <div class="hero-section-left">
+                <div class="hero-section-heading">Hi!! Priyanshu Saini </div>
+                <div class="hero-section-heading hero-section-sub-heading">
+                    I am a <span class="role"></span>
+                </div>
+                <div class="hero-section-description">
+                    I'm a aspiring software developer and this is my portfolio website . Here you'll learn about my journey as an aspiring developer.
+
+                </div>
+            <!-- <div class="btn-pink" id="btn"> Hire me </div> -->
+
+            <a href="https://www.linkedin.com/in/priyanshu-saini-761486271/" target="_blank" style="text-decoration: none;">
+              <div class="btn-pink" id="btn">Hire me</div>
+            </a>
+
+            <div class="faded-text">Priyanshu Saini </div>
+
+           <!-- ye sari cheeje that is text and button agya in hero sec left portion within the div hero sec  -->
+
+            </div>
+<!-- now hero sec right  -->
+
+
+<div class="hero-section-right">
+   <div class="absolute icons icon-dots">
+    <img src="/blue-dot-pattern-free-png.webp" style="height: 50px;">
+   </div>
+   <div class="absolute icons icon-cube">
+    <img src="/cube h.png" style="height: 55px;">
+   </div>
+   <div class="absolute icons icon-circle">
+    <img src="/pngimg.com - circle_PNG49.png" style="height: 50px;">
+   </div>
+   <div class="absolute icons icon-zigzag">
+    <img src="/zig hai.png" style="height: 50px;">
+   </div>
+   <div class="absolute icons icon-plus">
+    <img src="/braces x.png" style="height: 55px;">
+   </div>
+   <div class="user-image">
+    <img src="/Screenshot (1289).png">
+   </div>
+<!-- 
+   ye sari cheeje vertical hai ise css me krte hai flex se  -->
+</div>
+
+        </div>
+</div>
+
+<!-- ab peoject sec dekhte hai to isme ek heading hai or 4 isme sec hai to ham ek bada sec bnaenge jisme sare proj honge to isme hogi ek heading then ek card or uske sath ek number us no. k bad icons hai bhut sare heading hai button jab ham is image pe hover ni krte to ispe ek black tint ati hai or piche ek bg image hai jo hamara actual past project hai uspe hamne button dala to read more uspe hamne icon dale for its github code and all or jo hamaari phli image hai vo left side ki trf h or usme ekshadow si hai phli image 01 rihjt me h 2nd me left side hai to kafi cheeje hai -->
+
+
+<!-- sbse upar project section usme project header pada hau hai hamne ek container bnaya jisme card honge card me project n0. hai or contnet hai content me icons ki images hai ,  tint and orange vali heading hai , button hai icons hai do button or 2 icon same div me rkh die  -->
+
+<div class="project" id="projects">
+  <h2 class="page-header">Projects</h2>
+
+  <div class="project-container">
+   <div class="project-card"id="project1">
+        <div class="project-number project-number-right">01</div>
+        <div class="project-content project-content-left">
+
+          <div class="project-skills-container">
+            <img class="project-skill" src="/HTML.png";>
+            <img class="project-skill" src="/CSS.png">
+            <img class="project-skill" src="/Javascript.svg">
+            <img class="project-skill" src="/Bootstrap.svg">
+            <img class="project-skill" src="/MongoDB.svg">
+            <img class="project-skill" src="/Github (1).svg">
+            <img class="project-skill" src="/NodeJs.svg">
+         
+
+
+
+          </div>
+
+          <h2 class="project-heading">Spotify Clone </h2>
+          <p class="project-subHeading">it is a spotify clone web page which shows my work </p>
+<!-- ab btn grp me do cheeje hai btn and icons button jo hamara yaha hai usme hamne do class di ek to btn-pink jisse puarane button ki prop isme a jaye or ek di btn-project taki ham apna ye btn adjust kr paye  -->
+
+          <div class="btn-grp">
+            <button class="btn-pink btn-project">Read More</button>
+
+            <a href="">
+              <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+            </a>
+            <a href="">
+              <i title="Live Link" class="fa-solid fa-link icon"></i>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="project-card"id="project2">
+        <div class="project-number project-number-left">02</div>
+        <div class="project-content project-content-right">
+          <div class="project-skills-container">
+            <img class="project-skill" src="/HTML.png";>
+            <img class="project-skill" src="/CSS.png">
+            <img class="project-skill" src="/Javascript.svg">
+            <img class="project-skill" src="/Bootstrap.svg">
+            <img class="project-skill" src="/MongoDB.svg">
+            <img class="project-skill" src="/Github (1).svg">
+            <img class="project-skill" src="/NodeJs.svg">
+
+
+
+          </div>
+
+          <h2 class="project-heading"> Codex website  </h2>
+          <div class="project-subHeading">a dynamic coding club web page of my college which shows my work </div>
+<!-- ab btn grp me do cheeje hai btn and icons button jo hamara yaha hai usme hamne do class di ek to btn-pink jisse puarane button ki prop isme a jaye or ek di btn-project taki ham apna ye btn adjust kr paye  -->
+
+          <div class="btn-grp">
+            <button class="btn-pink btn-project">Read More</button>
+
+            <a href="">
+              <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+            </a>
+            <a href="">
+              <i title="Live Link" class="fa-solid fa-link icon"></i>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="project-card"id="project3">
+        <div class="project-number project-number-right">03</div>
+        <div class="project-content project-content-left">
+          <div class="project-skills-container">
+            <img class="project-skill" src="/HTML.png";>
+            <img class="project-skill" src="/CSS.png">
+            <img class="project-skill" src="/Javascript.svg">
+            <img class="project-skill" src="/Bootstrap.svg">
+            <img class="project-skill" src="/MongoDB.svg">
+            <img class="project-skill" src="/Github (1).svg">
+            <img class="project-skill" src="/NodeJs.svg">
+
+
+
+          </div>
+
+          <h2 class="project-heading">Product Landing Page </h2>
+          <div class="project-subHeading">a Coca Cola clone web page which shows my work </div>
+<!-- ab btn grp me do cheeje hai btn and icons button jo hamara yaha hai usme hamne do class di ek to btn-pink jisse puarane button ki prop isme a jaye or ek di btn-project taki ham apna ye btn adjust kr paye  -->
+
+          <div class="btn-grp">
+            <button class="btn-pink btn-project">Read More</button>
+
+            <a href="">
+              <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+            </a>
+            <a href="">
+              <i title="Live Link" class="fa-solid fa-link icon"></i>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="project-card"id="project4">
+        <div class="project-number project-number-left">04</div>
+        <div class="project-content project-content-right">
+          <div class="project-skills-container">
+            <img class="project-skill" src="/HTML.png";>
+            <img class="project-skill" src="/CSS.png">
+            <img class="project-skill" src="/Javascript.svg">
+            <img class="project-skill" src="/Bootstrap.svg">
+            <img class="project-skill" src="/MongoDB.svg">
+            <img class="project-skill" src="/Github (1).svg">
+            <img class="project-skill" src="/NodeJs.svg">
+
+
+
+          </div>
+
+          <h2 class="project-heading"> Dharohar </h2>
+          <div class="project-subHeading">it is a college fest web page which shows my work </div>
+<!-- ab btn grp me do cheeje hai btn and icons button jo hamara yaha hai usme hamne do class di ek to btn-pink jisse puarane button ki prop isme a jaye or ek di btn-project taki ham apna ye btn adjust kr paye  -->
+
+          <div class="btn-grp">
+            <button class="btn-pink btn-project">Read More</button>
+
+            <a href="">
+              <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+            </a>
+            <a href="">
+              <i title="Live Link" class="fa-solid fa-link icon"></i>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+    </div>
+  
+</div>
+
+
+
+<!-- 
+/* skill section ye section bhi upar vali 1200 px width pe hi kam krra to yaha bhi container class hogi isme pura ek div hai usme ek div icons ka ek text heading ka or paratext ka heading and para ek div me flex kr denge or unhe  me alag span me dalenge or use bada style krenge ek faded text hai skills ka niche right me icons ka dibba h usme flex hai or flex wrap hai or icons k piche ek animation hai  */ -->
+
+<div id="skills" class="container skills-container">
+  <div class="skill-fade-text">Skills</div>
+  <div class="skill-container-left">
+    <h2 class="skill-heading">
+      <span class="caps">M</span>e and <br>
+      MyTech Stack
+    </h2>
+    <div class="skill-subHeading">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quod atque quae aspernatur aliquid. Totam, reiciendis et? Porro perferendis expedita, nihil asperiores dolores reiciendis, tempore doloribus adipisci aliquam, quas excepturi?
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius magni libero amet non! Debitis, officia? Suscipit repudiandae veritatis enim illum voluptatum recusandae assumenda ab perspiciatis? Incidunt id totam libero optio.</p>
+
+      <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, esse culpa! Fugit error repellendus omnis commodi dicta modi veniam aut, optio itaque ab, recusandae ducimus sequi a pariatur autem praesentium.</p>
+
+    </div>
+  </div>
+
+  <div class="skill-container-right">
+    <img src="/blob vector.png" class="blob-style">
+
+    <img src="/Bootstrap.svg" class="skills-logo">
+    <img src="/Git.svg" class="skills-logo">
+    <img src="/Github (1).svg" class="skills-logo">
+    <img src="/Javascript.svg" class="skills-logo">
+    <img src="/js.jpg" class="skills-logo">
+    <img src="/MongoDB.svg" class="skills-logo">
+    <img src="/Next.svg" class="skills-logo">
+    <img src="/NodeJs.svg" class="skills-logo">
+    <img src="/HTML.png" class="skills-logo">
+    <img src="/Tailwind.png" class="skills-logo">
+    <img src="/MaterialUI.svg" class="skills-logo">
+    <img src="/Bash.svg" class="skills-logo">
+    <img src="/Redux.svg" class="skills-logo">
+    <img src="/Graphql.svg" class="skills-logo">
+    <img src="/MaterialUI.svg" class="skills-logo">
+    <img src="/React.png" class="skills-logo">
+    <img src="/CSS.png" class="skills-logo">
+    <img src="/Next.svg" class="skills-logo">
+    <img src="/NextJsCircle.png" class="skills-logo">
+    <img src="/NodeJs.svg" class="skills-logo">
+
+  </div>
+</div>
+
+<!-- 
+
+ab ham contact me and footer section bnanege to contact ne bg color grey h or full width lera ek heading hai ek subheading hai sara form lekin jo hai 1200px me hai ie container class me ayega  -->
+<!-- pura form mera 1200 px vale container me aye  -->
+
+<div class="contactus-form-container" id="contact me">
+   <div class="container">
+
+<h1 class="contactus-heading">Contact me</h1>
+
+<h3 class="contactus-subheading">Quentions,thoughts, 
+  or just want to say Hello ?</h3>
+
+  <div class="contactus-form-container">
+    <form class ="form" action="">
+      <div class="formfield-container">
+        <input class="formfield"
+         type="text"
+          name="name" 
+          id=""
+        placeholder="Enter Your Name">
+
+        <input class="formfield"
+        type="email"
+        name="email"
+        id=""
+        placeholder="Enter your email adress">
+
+        <input class="formfield"
+        type="text"
+        name="subject"
+        id=""
+        placeholder="Enter your subject">
+
+        <textarea name="message"
+        id="" cols="30" rows="10"
+        class="formfield formfield-textarea"
+        placeholder="Enter your message"></textarea>
+
+
+        <div>
+          <button type="submit" class="btn-pink" id="submit-btn">
+            Send Message <i class="submit-icon fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+
+
+      </div>
+    </form>
+  </div>
+
+   </div> 
+
+</div>
+
+
+<!-- footer -->
+
+<!-- footer me bhi same container class use hogi then main ek badi div footer wrapper usme faded text ki div link wrapper ki div jisme links hai or ek icon ka wrappper  -->
+
+<footer>
+
+  <div class="container">
+      <div class="footer-wrapper">
+
+          <div class="footer-faded-text">
+              Priyanshu Saini 
+          </div>
+
+          <div class="link-wrapper">
+              <div>
+                  <a href="#projects">Projects</a>
+              </div>
+
+              <div>
+                  <a href="#skills">Skills</a>
+              </div>
+
+              <div>
+                  <a href="#contact-me">Contact Me</a>
+              </div>
+          </div>
+
+          <div class="icon-wrapper">
+              <i class="fa-brands fa-linkedin icon"></i>
+              <i class="fa-brands fa-github icon"></i>
+              <i class="fa-brands fa-twitter icon"></i>
+              <i class="fa-brands fa-instagram icon"></i>
+              <i class="fa-regular fa-envelope icon"></i>
+          </div>
+
+      </div>
+  </div>
+
+</footer>
+
+
+
+
+
+
+    </div>
+
+     <!-- vo jo hero section me hmara text automatic change hoga uskis cript e hai neeche  -->
+
+     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+     <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+     <script>
+       var typeData = new Typed(".role", {
+         strings: [
+           "Student",
+           "Web Developer",
+           "DSA Enthusiast",
+           "Speaker",
+           "Coder",
+         ],
+         loop: true,
+         typeSpeed: 100,
+         backSpeed: 80,
+         backDelay: 1000,
+       });
+       </script>
+</body>
+</html>
